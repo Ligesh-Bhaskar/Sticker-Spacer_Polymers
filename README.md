@@ -28,6 +28,6 @@ The `PostProcessing/` directory contains the post-processing and plotting script
 
 - `Rg_Data/`: Radius of gyration of the polymer in the dense and dilute phases for lower and higher binding affinities ($\epsilon = 4,\, 6$) at Pe = 0 and Pe = 0.5. This data is used to generate Fig. S5.
 
-- `Plots/`: Final plots used in the paper.
+- `Plots/`: Final plots used in the paper. 
 
 
