@@ -22,11 +22,11 @@ The `PostProcessing/` directory contains the post-processing and plotting script
 
 - `Final_Plotting.py`: Script used to post-process simulation data and generate the plots used in the paper. It processes data from the directories listed below and saves the resulting figures in the `Plots/` directory.
 
-- `Cluster_Data/`: Droplet (cluster) size as a function of Pe. This data is used to generate Fig. 5B.
+- `Cluster_Data/`: Droplet (cluster) size as a function of Pe. This data is used to generate Fig. 6B.
 
-- `Partition_Data/`: Partition coefficient data for different Pe values. This data is used to compute the average partition coefficient shown in Fig. 5C.
+- `Partition_Data/`: Partition coefficient data for different Pe values. This data is used to compute the average partition coefficient shown in Fig. 6C.
 
-- `Rg_Data/`: Radius of gyration of the polymer in the dense and dilute phases for lower and higher binding affinities ($\epsilon = 4,\, 6$) at Pe = 0 and Pe = 0.5. This data is used to generate Fig. S5.
+- `Rg_Data/`: Radius of gyration of the polymer in the dense and dilute phases for lower and higher binding affinities ($\epsilon = 4,\, 6$) at Pe = 0 and Pe = 0.5. This data is used to generate the supporting figure.
 
 - `Plots/`: Final plots used in the paper. 
 
