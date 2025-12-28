@@ -53,5 +53,3 @@ Here, `N` is the number of MPI processes (we used `N = 16` for all simulations).
   
 ```bash
 python3 Final_Plotting.py
-
-
