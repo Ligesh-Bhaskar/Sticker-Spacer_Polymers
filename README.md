@@ -39,7 +39,7 @@ All simulations were performed using LAMMPS (27 June 2024 version) compiled with
 - MPI library (e.g., OpenMPI or MPICH).
 - Python 3 (for post-processing and plotting).
   
-- **Running the simulations:**
+#### Running the simulations
    
   Each simulation consists of an initial relaxation run, followed by a production run that is started from the corresponding relaxed configuration. Relaxation runs generate equilibrated configurations as restart files in the `Out_Relax/` directory, while production runs write XYZ trajectory and restart files to the `Out_Record/` directory.
 
