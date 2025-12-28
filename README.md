@@ -47,3 +47,5 @@ All simulations were performed using LAMMPS (27 June 2024 version) compiled with
   mpirun -np N lmp -sf omp -pk omp 2 -in Poly_Relax_ABP0.1_T300_E6_Pe0.in
   mpirun -np N lmp -sf omp -pk omp 2 -in Poly_Record_ABP0.1_T300_E6_Pe0.in
 
+Here, `N` is the number of MPI processes (we used `N = 16` for all simulations). The `-sf omp` and `-pk omp 2` flags enable OpenMP threading within each MPI process.
+
