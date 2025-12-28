@@ -1,5 +1,7 @@
 # Sticker-spacer polymers in active bath
-This repository contains LAMMPS input scripts, data files, and generated outputs for simulations of sticker-spacer polymers immersed in passive or active Brownian particle baths. The analysis code and processed data used for figure generation are provided in the `PostProcessing/` directory, organized into `Cluster_Data/`, `Partition_Data/`, `Rg_Data/`, and `Plots/`.
+This repository contains LAMMPS input scripts, data files, and generated outputs for simulations of sticker-spacer polymers immersed in passive or active Brownian particle baths. The analysis code and processed data used for figure generation are provided in the `PostProcessing/` directory, organized into `Cluster_Data/`, `Partition_Data/`, `Rg_Data/`, and `Plots/`. 
+
+###LAMMPS input scripts and configuration files
 
 - `Polymer_Stickers_ABP1200_Hybrid.dat`: LAMMPS data file defining the initial configuration of the sticker–spacer polymers and Brownian particle bath, including particle types, bonds, and simulation box dimensions.
 
@@ -26,4 +28,22 @@ The `PostProcessing/` directory contains the post-processing and plotting code, 
 
 - `Plots/`: Final plots used in the paper. 
 
+
+## How to run the simulations and post-process the data
+
+All simulations were performed using LAMMPS (27 June 2024 version) compiled with MPI support. Parallel execution was employed for both relaxation and production runs using a hybrid MPI–OpenMP configuration, with 16 MPI processes and 2 OpenMP threads per process, enabled via the `-sf omp` and `-pk omp` options.
+
+## Requirements
+- LAMMPS (27 June 2024 version or newer), compiled with MPI and OpenMP support.
+- MPI library (e.g., OpenMPI or MPICH).
+- Python 3 (for post-processing and plotting).
+  
+- **Running the simulations:**  
+  Each simulation consists of an initial relaxation run, followed by a production run that is started from the corresponding relaxed configuration. Relaxation runs generate equilibrated configurations as restart files in the `Out_Relax/` directory, while production runs write XYZ trajectory and restart files to the `Out_Record/` directory.
+
+  Simulations are executed in parallel using MPI as:
+
+  ```bash
+  mpirun -np N lmp -sf omp -pk omp 2 -in Poly_Relax_ABP0.1_T300_E6_Pe0.in
+  mpirun -np N lmp -sf omp -pk omp 2 -in Poly_Record_ABP0.1_T300_E6_Pe0.in
 
