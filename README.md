@@ -4,6 +4,7 @@ This repository contains LAMMPS input scripts, data files, and generated outputs
 ### Analysis
 
 The `Analysis/` directory contains the postprocessing/plotting script and processed data used to generate the figures in the article:
+- `Final_Plotting.py`: The code used for postprocessing the data from simulations to generate the plots used in the paper. It processes the data from the directories mentioned below to generate the plots in the directory `Plots/`
 - `Cluster_Data/`: Size of the droplets as a function of Pe. This data is used for generating Fig. 5B.
 - `Partition_Data/`: Partition coefficients data for different Pe. This data is used for computing the average partition coefficient shown in Fig. 5C.
 - `Rg_Data/`: Radius of gyration of the polymer in dense and dilute phase for lower and higher binding affinities ($\epsilon = 4, \, 6$) for Pe = 0 and Pe =0.5. It is plotted in Fig. S5.
