@@ -14,7 +14,7 @@ This repository contains LAMMPS input scripts, data files, and generated outputs
 - `Out_Record/`: Directory containing production run output files, and restart files used for post-processing and analysis.
 
 
-### PostProcessing
+## PostProcessing
 
 The `PostProcessing/` directory contains the post-processing and plotting code, along with the processed data, used to generate the figures in the article:
 
@@ -33,7 +33,7 @@ The `PostProcessing/` directory contains the post-processing and plotting code, 
 
 All simulations were performed using LAMMPS (27 June 2024 version) compiled with MPI support. Parallel execution was employed for both relaxation and production runs using a hybrid MPI–OpenMP configuration, with 16 MPI processes and 2 OpenMP threads per process, enabled via the `-sf omp` and `-pk omp` options.
 
-## Requirements
+#### Requirements
 - LAMMPS (27 June 2024 version or newer), compiled with MPI and OpenMP support.
 - MPI library (e.g., OpenMPI or MPICH).
 - Python 3 (for post-processing and plotting).
