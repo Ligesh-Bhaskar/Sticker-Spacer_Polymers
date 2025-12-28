@@ -1,0 +1,40 @@
+read_restart Out_Relax/PolyStickers_ABP1200_Pe1.0_T300_E6_Relax.restart
+
+pair_style hybrid lj/cut/omp 8.976 soft/omp 1
+pair_coeff 1 1 lj/cut/omp 4.14 2.0 2.244
+pair_coeff 2 2 lj/cut/omp 4.14 2.0 2.244
+pair_coeff 3 3 lj/cut/omp 4.14 8.0 8.976
+pair_coeff 1 2 soft/omp -24.84 1
+pair_coeff 1 3 lj/cut/omp 4.14 5.0 5.61
+pair_coeff 2 3 lj/cut/omp 4.14 5.0 5.61
+pair_modify shift yes
+special_bonds lj/coul 1.0 1.0 1.0
+
+bond_style fene/omp
+bond_coeff 1 0.621 10 0 0
+
+neighbor 9.5 bin
+neigh_modify every 1 delay 0
+
+group solvent type 3
+
+fix 1 all nve/omp
+fix 2 all langevin 300.0 300.0 10 244235 angmom 3.333
+fix 3 all balance 2000000 1.05 shift x 10 1.05
+
+fix 4 solvent propel/self quat 0.5175
+
+thermo 200000
+timestep 0.0005
+
+restart 1000000 Out_Relax/SimPD_Poly_ABP1200_T300_E6_Pe1.0.restart
+
+dump D1 all custom 50000 Out_Record/traj_PolyStickers_ABP1200_Pe1.0_T300_E6_Record.lammpstrj id type x y z ix iy iz
+
+dump D2 all xyz 50000 Out_Record/PolyStickers_ABP1200_Pe1.0_T300_E6.xyz
+
+dump_modify D2 sort id
+
+run 50000000
+
+write_restart Out_Record/PolyStickers_ABP1200_Pe1.0_T300_E6_Record.restart
