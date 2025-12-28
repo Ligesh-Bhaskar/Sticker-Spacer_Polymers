@@ -3,9 +3,10 @@ This repository contains LAMMPS input scripts, data files, and generated outputs
 
 ### Analysis
 
-The `Analysis/` directory contains the scripts and processed data used to generate the figures in the article:
-- `Cluster_Data/`: polymer and solvent cluster statistics  
-- `Rg_Data/`: radius of gyration measurements  
-- `Partition_Data/`: phase partitioning and enrichment data  
+The `Analysis/` directory contains the postprocessing/plotting script and processed data used to generate the figures in the article:
+- `Cluster_Data/`: Size of the droplets as a function of Pe. This data is used for generating Fig. 5B.
+- `Partition_Data/`: Partition coefficients data for different Pe. This data is used for computing the average partition coefficient shown in Fig. 5C.
+- `Rg_Data/`: Radius of gyration of the polymer in dense and dilute phase for lower and higher binding affinities ($\spsilon = 4, 6$) for Pe = 0 and Pe =0.5. It is plotted in Fig. S5.
+ 
 - `Plots/`: final plots used in the paper
 
