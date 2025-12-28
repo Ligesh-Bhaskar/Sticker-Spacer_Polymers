@@ -1,7 +1,7 @@
 # Sticker-spacer polymers in active bath
 This repository contains LAMMPS input scripts, data files, and generated outputs for simulations of sticker-spacer polymers immersed in passive or active Brownian particle baths. The analysis code and processed data used for figure generation are provided in the `PostProcessing/` directory, organized into `Cluster_Data/`, `Partition_Data/`, `Rg_Data/`, and `Plots/`. 
 
-###LAMMPS input scripts and configuration files
+### LAMMPS input scripts and configuration files
 
 - `Polymer_Stickers_ABP1200_Hybrid.dat`: LAMMPS data file defining the initial configuration of the sticker–spacer polymers and Brownian particle bath, including particle types, bonds, and simulation box dimensions.
 
