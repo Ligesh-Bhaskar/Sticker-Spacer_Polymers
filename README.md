@@ -8,5 +8,5 @@ The `Analysis/` directory contains the postprocessing/plotting script and proces
 - `Partition_Data/`: Partition coefficients data for different Pe. This data is used for computing the average partition coefficient shown in Fig. 5C.
 - `Rg_Data/`: Radius of gyration of the polymer in dense and dilute phase for lower and higher binding affinities ($\epsilon = 4, \, 6$) for Pe = 0 and Pe =0.5. It is plotted in Fig. S5.
  
-- `Plots/`: final plots used in the paper
+- `Plots/`: The plots used in the paper. 
 
